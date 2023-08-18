@@ -1,4 +1,5 @@
 // stores a list of 5775 popular words in English
+// the list is Donald Knuth's public domain GraphBase list of five-letter words
 const randomWords = [
   "which",
   "there",
