@@ -1,3 +1,4 @@
+// stores a list of 5775 popular words in English
 const randomWords = [
   "which",
   "there",
@@ -5758,18 +5759,21 @@ const randomWords = [
   "pupal",
 ];
 
+// selects a random word from the list
 function randomize() {
   return randomWords[Math.floor(Math.random() * randomWords.length)];
 }
 
 let totalWord = randomize().toString();
 
+// prepares readline-sync for user prompting
 function userInput(prompt) {
   const readline = require("readline-sync");
   const question = readline.question(prompt);
   return question;
 }
 
+// checks the user's input against the randomly selected word from the list
 function wordCheck() {
   let attemptNumber = 1;
   while (attemptNumber < 6) {
@@ -5817,4 +5821,5 @@ function wordCheck() {
   }
 }
 
+// runs the script
 totalWord();
