@@ -20,7 +20,7 @@ The list of 5-letter words (created by Donald Knuth) is in the public domain and
 
 1. Clone the repository to your machine
 
-`git clone https://github.com/chriseborowski/random6.git`
+`git clone https://github.com/chriseborowski/totalword.git`
 
 2. Make sure you have [Node.js](https://nodejs.org/en), [npm](https://www.npmjs.com/), and the [readline-sync](https://github.com/anseki/readline-sync) package (see below) installed
 
