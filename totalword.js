@@ -5777,6 +5777,9 @@ function userInput(prompt) {
 // checks the user's input against the randomly selected word from the list
 function wordCheck() {
   let attemptNumber = 1;
+  // if (randomWords.includes(attempt) === false) {
+  //   console.log("The word you entered is not on the list. Try again.");
+  // }
   while (attemptNumber < 6) {
     const attempt = userInput("Enter your 5-letter word: ").toLowerCase();
     console.log(
@@ -5788,6 +5791,8 @@ function wordCheck() {
         `Congratulations! You guessed the word: ${totalWord.toUpperCase()}`
       );
       return;
+    } else if (randomWords.includes(attempt) === false) {
+      console.log("The word you entered is not on the list. Try again.");
     } else {
       if (attempt.length !== 5) {
         console.log("You must enter a 5-letter word.");
