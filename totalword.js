@@ -5792,7 +5792,9 @@ function wordCheck() {
       );
       return;
     } else if (randomWords.includes(attempt) === false) {
-      console.log("The word you entered is not on the list. Try again.");
+      console.log(
+        "The word isn't on the list, this doesn't count as an attempt. Try again."
+      );
       attemptNumber--;
     } else {
       if (attempt.length !== 5) {
