@@ -5793,6 +5793,7 @@ function wordCheck() {
       return;
     } else if (randomWords.includes(attempt) === false) {
       console.log("The word you entered is not on the list. Try again.");
+      attemptNumber--;
     } else {
       if (attempt.length !== 5) {
         console.log("You must enter a 5-letter word.");
