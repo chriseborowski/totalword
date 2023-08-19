@@ -12,6 +12,8 @@ For a live demo of the project on Replit, click [here](https://replit.com/@chris
 
 For a video clip demonstrating the game, click [here](https://twitter.com/chriseborowski/status/1666513865570394131).
 
+The list of 5-letter words (created by Donald Knuth) is in the public domain and can be found [here](http://www-cs-faculty.stanford.edu/~knuth/sgb.html). (For an example of similar use, see [here](https://github.com/charlesreid1/five-letter-words/tree/master).)
+
 ## Getting started
 
 ### JavaScript instructions
