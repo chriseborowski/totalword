@@ -5823,4 +5823,4 @@ function wordCheck() {
 }
 
 // runs the script
-totalWord();
+wordCheck();
