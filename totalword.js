@@ -5801,7 +5801,9 @@ function wordCheck() {
             );
           } else if (totalWord.includes(attempt[i])) {
             console.log(
-              `Good! The letter ${attempt[i]} is somewhere in the word.`
+              `Good! The letter ${attempt[
+                i
+              ].toUpperCase()} is somewhere in the word.`
             );
           } else {
             incorrectLetters += attempt[i].toUpperCase() + " ";
