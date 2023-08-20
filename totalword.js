@@ -5785,7 +5785,6 @@ function wordCheck() {
     console.log(
       `Attempt #${attemptNumber}: You entered ${attempt.toUpperCase()}`
     );
-    let incorrectLetters = "";
     if (attempt === totalWord) {
       console.log(
         `Congratulations! You guessed the word: ${totalWord.toUpperCase()}`
@@ -5800,6 +5799,8 @@ function wordCheck() {
       if (attempt.length !== 5) {
         console.log("You must enter a 5-letter word.");
       } else {
+        let incorrectLetters = "";
+        let correctLetters = "";
         for (let i = 0; i < 5; i++) {
           if (attempt[i] === totalWord[i]) {
             console.log(
@@ -5813,6 +5814,7 @@ function wordCheck() {
                 i
               ].toUpperCase()} is somewhere in the word.`
             );
+            correctLetters += attempt[i].toUpperCase() + " ";
           } else {
             incorrectLetters += attempt[i].toUpperCase() + " ";
             console.log(
@@ -5820,7 +5822,12 @@ function wordCheck() {
             );
           }
         }
-        console.log(`Incorrect letters: ${incorrectLetters}.`);
+        if (correctLetters.length > 0) {
+          console.log(`Correct letter(s): ${correctLetters}`);
+        }
+        if (incorrectLetters.length > 0) {
+          console.log(`Incorrect letter(s): ${incorrectLetters}`);
+        }
       }
     }
     attemptNumber++;

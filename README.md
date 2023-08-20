@@ -16,7 +16,7 @@ The list of 5-letter words (created by Donald Knuth) is in the public domain and
 
 ## Getting started
 
-### JavaScript instructions
+### Instructions
 
 1. Clone the repository to your machine
 
