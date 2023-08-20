@@ -5778,6 +5778,7 @@ function userInput(prompt) {
 function wordCheck() {
   let attemptNumber = 1;
   let globalCorrectLetters = "";
+  let globalIncorrectLetters = "";
   while (attemptNumber < 6) {
     const attempt = userInput("Enter your 5-letter word: ").toLowerCase();
     console.log(
@@ -5797,7 +5798,6 @@ function wordCheck() {
       if (attempt.length !== 5) {
         console.log("You must enter a 5-letter word.");
       } else {
-        let incorrectLetters = "";
         for (let i = 0; i < 5; i++) {
           if (attempt[i] === totalWord[i]) {
             console.log(
@@ -5817,14 +5817,14 @@ function wordCheck() {
             console.log(
               `The letter ${attempt[i].toUpperCase()} is missing from the word.`
             );
-            incorrectLetters += attempt[i].toUpperCase() + " ";
+            globalIncorrectLetters += attempt[i].toUpperCase() + " ";
           }
         }
         if (globalCorrectLetters.length > 0) {
           console.log(`Correct letter(s): ${globalCorrectLetters}`);
         }
-        if (incorrectLetters.length > 0) {
-          console.log(`Incorrect letter(s): ${incorrectLetters}`);
+        if (globalIncorrectLetters.length > 0) {
+          console.log(`Incorrect letter(s): ${globalIncorrectLetters}`);
         }
       }
     }
