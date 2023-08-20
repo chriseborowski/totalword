@@ -5777,6 +5777,7 @@ function userInput(prompt) {
 // checks the user's input against the randomly selected word from the list
 function wordCheck() {
   let attemptNumber = 1;
+  let globalCorrectLetters = "";
   while (attemptNumber < 6) {
     const attempt = userInput("Enter your 5-letter word: ").toLowerCase();
     console.log(
@@ -5796,31 +5797,31 @@ function wordCheck() {
       if (attempt.length !== 5) {
         console.log("You must enter a 5-letter word.");
       } else {
-        let correctLetters = "";
         let incorrectLetters = "";
         for (let i = 0; i < 5; i++) {
           if (attempt[i] === totalWord[i]) {
             console.log(
-              `You guessed the letter ${attempt[
+              `Nice! You guessed the letter ${attempt[
                 i
               ].toUpperCase()} in this position correctly.`
             );
+            globalCorrectLetters += attempt[i].toUpperCase() + " ";
           } else if (totalWord.includes(attempt[i])) {
             console.log(
               `Good! The letter ${attempt[
                 i
               ].toUpperCase()} is somewhere in the word.`
             );
-            correctLetters += attempt[i].toUpperCase() + " ";
+            globalCorrectLetters += attempt[i].toUpperCase() + " ";
           } else {
-            incorrectLetters += attempt[i].toUpperCase() + " ";
             console.log(
               `The letter ${attempt[i].toUpperCase()} is missing from the word.`
             );
+            incorrectLetters += attempt[i].toUpperCase() + " ";
           }
         }
-        if (correctLetters.length > 0) {
-          console.log(`Correct letter(s): ${correctLetters}`);
+        if (globalCorrectLetters.length > 0) {
+          console.log(`Correct letter(s): ${globalCorrectLetters}`);
         }
         if (incorrectLetters.length > 0) {
           console.log(`Incorrect letter(s): ${incorrectLetters}`);
