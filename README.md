@@ -48,6 +48,7 @@ The current version supports the following functionalities:
 - [x] Display free attempt message
 - [x] Support for unique correct/incorrect letter values in message display
 - [x] Sort all unique correct/incorrect letters alphabetically
+- [x] List all possible words in a separate imported file
 
 ## License
 
