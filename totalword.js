@@ -5825,10 +5825,18 @@ function wordCheck() {
           }
         }
         if (globalCorrectLetters.length > 0) {
-          console.log(`Correct letter(s): ${globalCorrectLetters}`);
+          console.log(
+            `Correct letter(s): ${globalCorrectLetters
+              .filter(uniqueLetters)
+              .sort()}`
+          );
         }
         if (globalIncorrectLetters.length > 0) {
-          console.log(`Incorrect letter(s): ${globalIncorrectLetters}`);
+          console.log(
+            `Incorrect letter(s): ${globalIncorrectLetters
+              .filter(uniqueLetters)
+              .sort()}`
+          );
         } // add function (filter()) to remove duplicate in/correct letters
       }
     }
