@@ -5774,6 +5774,7 @@ function userInput(prompt) {
   return question;
 }
 
+// declare function to filter unique array values
 function uniqueLetters(value, index, array) {
   return array.indexOf(value) === index;
 }
@@ -5837,7 +5838,7 @@ function wordCheck() {
               .filter(uniqueLetters)
               .sort()}`
           );
-        } // add function (filter()) to remove duplicate in/correct letters
+        }
       }
     }
     attemptNumber++;
