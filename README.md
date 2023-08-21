@@ -37,8 +37,8 @@ The list of 5-letter words (created by Donald Knuth) is in the public domain and
 The current version supports the following functionalities:
 
 - [x] Initial version released
-- [x] Display all correctly entered letters after each attempt
-- [x] Display all incorrectly entered letters after each attempt
+- [x] Display all correctly entered letters heretofore after each attempt
+- [x] Display all incorrectly entered letters heretofore after each attempt
 - [x] Display letters in the correct position
 - [x] Support for uppercase/lowercase user input
 - [x] Display what the intended word is
@@ -46,6 +46,8 @@ The current version supports the following functionalities:
 - [x] Display message when user input is outside of the word list
 - [x] Free attempt when user input outside of the word list
 - [x] Display free attempt message
+- [x] Support for unique correct/incorrect letter values in message display
+- [x] Sort all unique correct/incorrect letters alphabetically
 
 ## License
 
