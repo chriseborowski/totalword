@@ -5774,11 +5774,15 @@ function userInput(prompt) {
   return question;
 }
 
+function uniqueLetters(value, index, array) {
+  return array.indexOf(value) === index;
+}
+
 // checks the user's input against the randomly selected word from the list
 function wordCheck() {
   let attemptNumber = 1;
-  let globalCorrectLetters = "";
-  let globalIncorrectLetters = "";
+  let globalCorrectLetters = [];
+  let globalIncorrectLetters = [];
   while (attemptNumber < 6) {
     const attempt = userInput("Enter your 5-letter word: ").toLowerCase();
     console.log(
@@ -5805,19 +5809,19 @@ function wordCheck() {
                 i
               ].toUpperCase()} in this position correctly.`
             );
-            globalCorrectLetters += attempt[i].toUpperCase() + " ";
+            globalCorrectLetters.push(attempt[i].toUpperCase());
           } else if (totalWord.includes(attempt[i])) {
             console.log(
               `Good! The letter ${attempt[
                 i
               ].toUpperCase()} is somewhere in the word.`
             );
-            globalCorrectLetters += attempt[i].toUpperCase() + " ";
+            globalCorrectLetters.push(attempt[i].toUpperCase());
           } else {
             console.log(
               `The letter ${attempt[i].toUpperCase()} is missing from the word.`
             );
-            globalIncorrectLetters += attempt[i].toUpperCase() + " ";
+            globalIncorrectLetters.push(attempt[i].toUpperCase());
           }
         }
         if (globalCorrectLetters.length > 0) {
@@ -5825,7 +5829,7 @@ function wordCheck() {
         }
         if (globalIncorrectLetters.length > 0) {
           console.log(`Incorrect letter(s): ${globalIncorrectLetters}`);
-        }
+        } // add function (filter()) to remove duplicate in/correct letters
       }
     }
     attemptNumber++;
